@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=League+Spartan:wght@100..900&family=Rum+Raisin&display=swap');
+
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: "Anton" serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navegação */
+nav {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Container Principal */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+/* Lado Esquerdo */
+.left {
+    flex: 0 0 50%; /* Lado esquerdo ocupa 50% da tela */
+    text-align: center;
+}
+
+/* Foto do Produto */
+.product-img {
+    width: 100%;
+    max-width: 400px; /* Limita a largura da imagem */
+    height: auto;
+    margin-bottom: 20px;
+    font-family: "anton" serif;
+}
+
+/* Sinopse e Botão */
+.synopsis {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.synopsis h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.synopsis p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.synopsis .btn {
+    padding: 10px 20px;
+    background-color: #0B6121;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.synopsis .btn:hover {
+    background-color: #47694e;
+}
+
+/* Lado Direito */
+.right {
+    flex: 0 0 40%; /* Lado direito ocupa 40% da tela */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aside-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.aside-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.aside-item .btn {
+    padding: 10px 20px;
+    background-color: #0B6121;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.aside-item .btn:hover {
+    background-color: #47694e;
+}
+
+h1 {
+    font-family: "Anton"serif;
+    font-size: 50px;
+    color: aliceblue;
+}
