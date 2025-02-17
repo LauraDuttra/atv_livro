@@ -136,6 +136,67 @@ h1 {
     font-size: 50px;
     color: aliceblue;
 }
+
 .fotinha{
     margin-top: 30px;
+}
+
+/* Estilo do Footer (igual à página principal) */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left, .right {
+        flex: 1 1 100%;
+    }
+
+    .synopsis h2 {
+        font-size: 24px;
+    }
+
+    .synopsis p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .synopsis h2 {
+        font-size: 22px;
+    }
+
+    .synopsis p {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 6px;
+    }
 }
