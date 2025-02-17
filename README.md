@@ -1,7 +1,3 @@
-Perfeito, agora entendi o estilo que você deseja! Vou criar o README para o seu projeto com base nesse modelo direto e objetivo. Aqui está a versão ajustada:
-
----
-
 # *Site Mult Páginas* 🌐
 
 *Estrutura do site com múltiplas páginas* 😎
