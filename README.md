@@ -1,6 +1,6 @@
 # *Projeto de Páginas Interativas* 📚
 
-## Figma
+## Figma 👌
 > https://www.figma.com/design/BhdwfwyvkaukHtFvhKHElk/identidade-visual?m=auto&t=59smAhEMkDMXhwmz-6
 
 *Estrutura com múltiplas páginas interativas, cada uma com seu estilo único* 😃
