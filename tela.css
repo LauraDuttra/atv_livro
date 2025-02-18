@@ -1,0 +1,213 @@
+/* Estilo geral do "livro" */
+.livro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('img/livro-aberto.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Estilo das seções (feedbacks) */
+.item {
+    display: none;
+    width: 90%; /* Ajuste de largura para telas menores */
+    max-width: 800px; /* Largura máxima para evitar que fique muito grande em telas grandes */
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--background);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+/* Ativar a exibição do item com a animação */
+.item.ativo {
+    display: block;
+    opacity: 1;
+    animation: viradaPagina 1s ease-in-out;
+}
+
+/* Estilo dos títulos e texto */
+.item .titulo {
+    font-size: 3rem;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+}
+
+.item .feedback {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.item .autor {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+/* Estilo dos botões de navegação */
+#anterior, #proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #E5CEAC;
+    border: 1px solid #E5CEAC;
+    color: #EEE;
+    font-size: x-large;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 4;
+    border-radius: 50%;
+}
+
+#anterior {
+    left: 20px;
+}
+
+#proximo {
+    right: 20px;
+}
+
+/* Animações de virada de página */
+@keyframes viradaPagina {
+    0% {
+        transform: rotateY(90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: rotateY(45deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes viradaPaginaReversa {
+    0% {
+        transform: rotateY(-90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: rotateY(-45deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+/* Estrela */
+.estrela {
+    position: fixed;
+    left: 85px;
+    bottom: 30px;
+    width: 160px;
+    height: auto;
+    z-index: 10;
+}
+
+/* Estilo do nav */
+nav {
+    background-color: #0A1E76; /* Cor do fundo do nav */
+    color: #EFE0CD; /* Cor do texto */
+    padding: 15px;
+    text-align: center;
+    font-family: "Anton", serif;
+}
+
+/* Estilo do footer */
+footer.final {
+    font-family: "League Spartan," serif;
+    background-color: #0A1E76; /* Cor do fundo do footer */
+    color: #EFE0CD; /* Cor do texto */
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Responsividade - Ajustes para telas menores (tablet, celular) */
+@media (max-width: 768px) {
+    .item {
+        width: 95%; /* Aumenta a largura para ficar mais visível em telas menores */
+    }
+
+    .item .titulo {
+        font-size: 2rem; /* Reduz o tamanho da fonte */
+    }
+
+    .item .feedback {
+        font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+    }
+
+    .item .autor {
+        font-size: 1rem; /* Ajuste o tamanho da fonte */
+    }
+
+    .estrela {
+        position: fixed;
+        left: 95px;
+        bottom: 30px; /* Ajustando a posição da estrela para ficar mais em baixo */
+        width: 180px;
+        height: auto;
+        z-index: 10;
+    }
+
+    #anterior, #proximo {
+        width: 40px;
+        height: 40px;
+        font-size: large;
+    }
+}
+
+/* Responsividade para telas muito pequenas (celular) */
+@media (max-width: 480px) {
+    .item {
+        width: 100%; /* Ocupa toda a largura da tela */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .item .titulo {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte */
+    }
+
+    .item .feedback {
+        font-size: 1rem; /* Ajuste o tamanho da fonte */
+    }
+
+    .item .autor {
+        font-size: 0.9rem; /* Ajuste o tamanho da fonte */
+    }
+
+    .estrela {
+        width: 80px; /* Diminui ainda mais a largura da estrela */
+        left: 5px;
+    }
+
+    #anterior, #proximo {
+        width: 30px;
+        height: 30px;
+        font-size: medium;
+    }
+}
